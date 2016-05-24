@@ -1,0 +1,12 @@
+.experience-view.ng-enter {
+    display: none;
+}
+.experience-view.ng-enter-active {
+    display: block;
+}
+.experience-view.ng-enter {
+    animation: fadeIn 0.5s ease; z-index: 8888;
+}
+.experience-view.ng-leave {
+    animation: fadeOut 0.5s ease; z-index: 9999; 
+}

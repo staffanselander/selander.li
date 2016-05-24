@@ -1,0 +1,92 @@
+<div class="container-fluid main-heading">
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<h1>Full stack &lt;/<span>dev</span>&gt;eloper</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid this-is-me">
+
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<img src="public/img/selfies.png" class="selfie">
+			<h2>Hello!</h2>
+			<p>I’m Staffan Selander. A full stack developer of the web and the internet of things!<br>
+			Writing code, developing new designs, backend or frontend, at the office or in the shower</p>
+            <p>I have taken out some of the technologies i use and i think should be in the spotlight!<br>
+            There are so many technologies, but let's just pick a few!</p>
+            <br>
+		</div>
+	</div>
+
+    <div ng-repeat="section in vm.sections">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="section-header">{{ section.title }}</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="col-xs-12" ng-bind-html="section.content">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                <div class="chart-wrapper" ng-repeat="resource in section.resources">
+                    <div class="chart-image-wrapper">
+                        <img ng-src="{{'public/img/components/skills/' + resource.image}}">
+                    </div>
+                    <div class="chart-tile-wrapper">
+                        <div class="chart-tile">
+                            <div class="chart-tile-fillout hold-animation" ng-class="{ 'hold-animation': !resource.showFlow }" when-visible="releaseAnimation" ng-style="{ 'width': resource.percentage + '%' }">
+                                <span>
+                                    <span value="{{ resource.countFrom }}" count-to="{{resource.countTo}}" duration="2">{{ resource.percentage }}</span>
+                                    <span>%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <div class="row">
+                    <div class="col-xs-12" ng-bind-html="section.content">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <hr class="section-seperator">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="work-section">
+    <div class="container this-is-me">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Work</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<br><br><br><br>
+
+<div class="footer">More information coming soon!</div>

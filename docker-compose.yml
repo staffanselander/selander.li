@@ -1,0 +1,12 @@
+selanderli:
+    image: ladyvipex/selander.li:latest
+    volumes:
+        - ./src:/usr/share/nginx/html
+    ports:
+        - 80:80
+        - 465:465
+
+prerender:
+    image: ifeelgoods/prerender:phantomjs2
+    links:
+        - selanderli
