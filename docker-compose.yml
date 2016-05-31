@@ -2,12 +2,10 @@ version: '2'
 
 services:
   selanderli:
-      build: .
-      ports:
-          - 80:80
-          - 465:465
+    build: .
+    ports:
+        - 80:80
+        - 465:465
 
   prerender:
-      image: ifeelgoods/prerender:phantomjs2
-      links:
-          - selanderli
+    image: ifeelgoods/prerender:phantomjs2

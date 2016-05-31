@@ -4,3 +4,4 @@ services:
   selanderli:
       volumes:
           - ./src:/usr/share/nginx/html
+          - ./nginx:/etc/nginx/conf.d/
