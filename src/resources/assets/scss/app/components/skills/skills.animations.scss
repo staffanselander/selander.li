@@ -9,6 +9,13 @@
     100% { transform: translate(0px, 100vh); opacity: 0; }
 }
 
+@keyframes blinking {
+    0% { opacity: 0; }
+    33% { opacity: 0; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 .skills-view.ng-enter {
     display: none;
 }

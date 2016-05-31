@@ -1,6 +1,7 @@
 angular.module('selander.li.components.skills.controller', [
     'selander.li.app.service',
     'angular-scroll-animate',
+    'angular-parallax',
     'countTo'
 ])
 
@@ -15,6 +16,8 @@ angular.module('selander.li.components.skills.controller', [
         if (!resource.showFlow) {
             resource.countTo = resource.percentage;
             resource.showFlow = true;
+
+            $scope.$apply();
         }
     };
 
@@ -35,21 +38,24 @@ angular.module('selander.li.components.skills.controller', [
                     image: 'git.png',
                     percentage: 100,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 },
                 {
                     title: 'docker',
                     image: 'docker.png',
                     percentage: 85,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 },
                 {
                     title: 'docker',
                     image: 'gulp-and-grunt.png',
                     percentage: 85,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 }
             ]
         },
@@ -64,21 +70,24 @@ angular.module('selander.li.components.skills.controller', [
                     image: 'php.png',
                     percentage: 100,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 },
                 {
                     title: 'laravel',
                     image: 'laravel.png',
                     percentage: 90,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 },
                 {
                     title: 'nodejs',
                     image: 'nodejs.png',
                     percentage: 70,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 }
             ]
         },
@@ -93,23 +102,28 @@ angular.module('selander.li.components.skills.controller', [
                     image: 'angular.png',
                     percentage: 90,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 },
                 {
                     title: 'jQuery',
                     image: 'jquery.png',
                     percentage: 100,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 },
                 {
                     title: 'photoshop',
                     image: 'photoshop.png',
                     percentage: 75,
                     countFrom: 0,
-                    countTo: 0
+                    countTo: 0,
+                    showFlow: false
                 }
             ]
         }
     ];
-});
+})
+
+;

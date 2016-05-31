@@ -5779,15 +5779,15 @@ body > navbar {
   width: 100%; }
 
 .navigation-wrapper {
+  position: fixed !important;
   padding-bottom: 20px;
   padding-top: 20px;
-  position: fixed !important;
   z-index: 100;
   width: 100%;
   left: 0;
   top: 0;
-  -webkit-transition: background .5s, padding .5s;
-  transition: background .5s, padding .5s; }
+  -webkit-transition: background .7s, padding .7s;
+  transition: background .7s, padding .7s; }
   .navigation-wrapper h1 {
     line-height: 21px;
     font-weight: 400;
@@ -5883,7 +5883,7 @@ body > navbar {
       .navigation-wrapper .navigation-blob-wrapper .icons-wrapper > a > img {
         width: 100%; }
   .navigation-wrapper.affix {
-    background: rgba(62, 70, 81, 0.9);
+    background: rgba(62, 70, 81, 0.95);
     width: 100% !important;
     padding: 7px 0; }
     .navigation-wrapper.affix .navigation-blob {
@@ -6145,6 +6145,26 @@ strong {
             transform: translate(0px, 100vh);
     opacity: 0; } }
 
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 0; }
+  33% {
+    opacity: 0; }
+  66% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes blinking {
+  0% {
+    opacity: 0; }
+  33% {
+    opacity: 0; }
+  66% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .skills-view.ng-enter {
   display: none; }
 
@@ -6160,6 +6180,40 @@ strong {
   -webkit-animation: skillsSlideDown 0.5s ease;
           animation: skillsSlideDown 0.5s ease;
   z-index: 10000; }
+
+.social-container {
+  position: fixed;
+  left: -20px;
+  top: 25%;
+  -webkit-transform: translate(-50px, 0px);
+      -ms-transform: translate(-50px, 0px);
+          transform: translate(-50px, 0px);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s; }
+  .social-container a {
+    margin: 0px 5px 5px 0px;
+    box-sizing: initial;
+    background: #f1654c;
+    padding-left: 20px;
+    max-width: 50px;
+    display: block;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s; }
+    .social-container a > img {
+      width: 50px; }
+
+.social-container.skills-social {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px); }
+  .social-container.skills-social a:hover {
+    -webkit-transform: translate(10px, 0px);
+        -ms-transform: translate(10px, 0px);
+            transform: translate(10px, 0px); }
 
 .skills-view {
   min-height: calc(100vh - 103px);
@@ -6181,11 +6235,29 @@ strong {
   .skills-view .section-seperator {
     margin: 60px auto 50px auto;
     border-width: 1px;
-    width: 360px;
-    max-width: 100%; }
+    max-width: 100%;
+    width: 360px; }
   .skills-view .section-header {
     margin-bottom: 60px;
     margin-top: 30px; }
+  .skills-view .email {
+    position: relative;
+    color: #3e4651; }
+    .skills-view .email::after {
+      -webkit-transition: width .3s;
+      transition: width .3s;
+      position: absolute;
+      content: "";
+      height: 1px;
+      opacity: .5;
+      bottom: 0;
+      width: 0%;
+      left: 0;
+      background: #3e4651; }
+    .skills-view .email:hover, .skills-view .email:active .skills-view .email:focus {
+      text-decoration: none; }
+      .skills-view .email:hover::after, .skills-view .email:active .skills-view .email:focus::after {
+        width: 100%; }
   .skills-view .this-is-me {
     position: relative;
     max-width: 860px;
@@ -6193,20 +6265,20 @@ strong {
     .skills-view .this-is-me .selfie {
       display: inline-block;
       width: 100px; }
+    .skills-view .this-is-me .header-paragraph {
+      margin-bottom: 20px;
+      margin-top: -5px; }
+    .skills-view .this-is-me .header-seperator {
+      margin: 50px auto 35px auto;
+      background: #eeeeee;
+      text-align: center;
+      max-width: 400px;
+      height: 1px;
+      width: 100%; }
     .skills-view .this-is-me p {
       margin-top: 20px;
       font-weight: 300;
       font-size: 16px; }
-  .skills-view .footer {
-    background: #d4d4d4;
-    position: absolute;
-    text-align: center;
-    font-size: 14px;
-    padding: 15px 0;
-    color: #7b7b7b;
-    width: 100%;
-    bottom: 0;
-    left: 0; }
 
 .chart-wrapper {
   margin-bottom: 30px;
@@ -6261,5 +6333,58 @@ strong {
           top: 47%; }
 
 .work-section {
-  padding-bottom: 40px;
-  padding-top: 50px; }
+  margin-top: 50px; }
+  .work-section.restaurang-online {
+    background-image: url("/public/img/components/skills/restaurangonline.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0; }
+  .work-section .work-section-inner-wrapper {
+    background: rgba(62, 70, 81, 0.95); }
+    .work-section .work-section-inner-wrapper p, .work-section .work-section-inner-wrapper a, .work-section .work-section-inner-wrapper strong, .work-section .work-section-inner-wrapper h1, .work-section .work-section-inner-wrapper h2, .work-section .work-section-inner-wrapper h3, .work-section .work-section-inner-wrapper h4 {
+      color: #ffffff; }
+  .work-section .this-is-me {
+    padding-bottom: 80px;
+    padding-top: 100px;
+    text-align: center; }
+    @media (max-width: 767px) {
+      .work-section .this-is-me {
+        text-align: left; } }
+  .work-section .icons-container > a {
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    display: inline-block;
+    max-height: 70px;
+    margin: 40px 20px; }
+    .work-section .icons-container > a:hover {
+      -webkit-transform: scale(1.08) rotate(5deg);
+          -ms-transform: scale(1.08) rotate(5deg);
+              transform: scale(1.08) rotate(5deg); }
+    .work-section .icons-container > a > img {
+      display: inline-block;
+      max-height: 70px; }
+  .work-section .timeline .year {
+    font-weight: 700;
+    font-size: 18px; }
+  .work-section .timeline .gap {
+    display: inline-block;
+    background: #7cda94;
+    height: 2px;
+    vertical-align: middle;
+    width: 40px;
+    border-radius: 5px;
+    margin: 0 20px; }
+
+.footer {
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 0;
+  color: #ffffff;
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+  .footer strong {
+    color: #f1654c;
+    font-weight: 700; }

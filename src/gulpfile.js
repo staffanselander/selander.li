@@ -1,5 +1,3 @@
-
-
 var gulp       = require('gulp');
 var sass       = require('gulp-sass');
 var concat     = require('gulp-concat');
@@ -52,7 +50,9 @@ gulp.task('javascriptDependencies', function() {
 			'./node_modules/angular-animate/angular-animate.js',
             './node_modules/angular-strap/dist/angular-strap.js',
             './node_modules/angular-scroll-animate/dist/angular-scroll-animate.js',
-            './node_modules/angular-count-to/src/count-to.js'
+            './node_modules/angular-scroll/angular-scroll.js',
+            './node_modules/angular-count-to/src/count-to.js',
+            './node_modules/angular-parallax/scripts/angular-parallax.js'
 		],
 		'dependencies.min.js'
 	);

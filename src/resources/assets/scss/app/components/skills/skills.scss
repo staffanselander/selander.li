@@ -1,3 +1,49 @@
+.social-container {
+    position: fixed;
+    left: -20px;
+    top: 25%;
+
+    // @media (max-width: $screen-xs-max) {
+    //     height: 20px;
+    //     width: 100%;
+    //     background: $orange;
+    // }
+    // 
+    transform: translate(-50px, 0px);
+
+    transition: transform .3s;
+
+    a {
+        margin: 0px 5px 5px 0px;
+        box-sizing: initial;
+        background: $orange;
+        padding-left: 20px;
+        max-width: 50px;
+        display: block;
+
+        transition: transform .3s;
+
+        > img {
+            width: 50px;
+        }
+    }
+}
+
+.social-container {
+
+    &.skills-social {
+        transform: translate(0px, 0px);
+
+        a {
+            &:hover {
+                transform: translate(10px, 0px);
+            }
+        }
+    }
+}
+
+
+
 .skills-view {
     min-height: calc(100vh - 103px);
     transform: translate(0px, 0px);
@@ -21,16 +67,41 @@
     }
 
     .section-seperator {
-        // opacity: 0;
         margin: 60px auto 50px auto;
         border-width: 1px;
-        width: 360px;
         max-width: 100%;
+        width: 360px;
     }
 
     .section-header {
         margin-bottom: 60px;
         margin-top: 30px;
+    }
+
+    .email {
+        position: relative;
+        color: $text-color;
+
+        &::after {
+            transition: width .3s;
+            position: absolute;
+            content: "";
+            height: 1px;
+            opacity: .5;
+            bottom: 0;
+            width: 0%;
+            left: 0;
+
+            background: $text-color;
+        }
+
+        &:hover, &:active &:focus {
+            text-decoration: none;
+            
+            &::after {
+                width: 100%;
+            }
+        }
     }
 
     .this-is-me {
@@ -43,23 +114,25 @@
             width: 100px;
         }
 
+        .header-paragraph {
+            margin-bottom: 20px;
+            margin-top: -5px;
+        }
+
+        .header-seperator {
+            margin: 50px auto 35px auto;
+            background: #eeeeee;
+            text-align: center;
+            max-width: 400px;
+            height: 1px;
+            width: 100%;
+        }
+
         p {
             margin-top: 20px;
             font-weight: 300;
             font-size: 16px;
         }
-    }
-
-    .footer {
-        background: #d4d4d4;
-        position: absolute;
-        text-align: center;
-        font-size: 14px;
-        padding: 15px 0;
-        color: #7b7b7b;
-        width: 100%;
-        bottom: 0;
-        left: 0;
     }
 }
 
@@ -129,11 +202,83 @@
 
 
 .work-section {
-    // background: #DDAD72;
-    padding-bottom: 40px;
-    padding-top: 50px;
+    margin-top: 50px;
 
-    h1 {
-        // color: #fff;
+    &.restaurang-online {
+        background-image: url('/public/img/components/skills/restaurangonline.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+    }
+
+    .work-section-inner-wrapper {
+        // box-shadow: inset 0px 0px 70px 40px #3e4651;
+        background: rgba(#3e4651, .95);
+
+        p, a, strong, h1, h2, h3, h4 {
+            color: $white;
+        }
+    }
+
+    .this-is-me {
+        padding-bottom: 80px;
+        padding-top: 100px;
+        text-align: center;
+
+        @media (max-width: $screen-xs-max) {
+            text-align: left;
+        }
+    }
+
+    .icons-container {
+
+        > a {
+            transition: transform .3s;
+            display: inline-block;
+            max-height: 70px;  
+            margin: 40px 20px;
+
+            &:hover {
+                transform: scale(1.08) rotate(5deg);
+            }
+
+            > img {
+                display: inline-block;
+                max-height: 70px;
+            }
+        }
+    }
+
+    .timeline {
+
+        .year {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .gap {
+            display: inline-block;
+            background: #7cda94;
+            height: 2px;
+            vertical-align: middle;
+            width: 40px;
+            border-radius: 5px;
+            margin: 0 20px;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    padding: 15px 0;
+    color: $white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    strong {
+        color: #f1654c;
+        font-weight: 700;
     }
 }

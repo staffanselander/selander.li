@@ -5,15 +5,15 @@ body > navbar {
 }
 
 .navigation-wrapper {
-    padding-bottom: 20px;
-	padding-top: 20px;
     position: fixed !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
     z-index: 100;
 	width: 100%;
     left: 0;
     top: 0;
 
-    transition: background .5s, padding .5s;
+    transition: background .7s, padding .7s;
 
 	h1 {
 		line-height: 21px;
@@ -137,7 +137,7 @@ body > navbar {
 	}
 
     &.affix {
-        background: rgba(#3E4651, .9);
+        background: rgba(#3E4651, .95);
         width: 100% !important;
         padding: 7px 0;
 

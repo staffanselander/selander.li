@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  selanderli:
+      volumes:
+          - ./src:/usr/share/nginx/html
