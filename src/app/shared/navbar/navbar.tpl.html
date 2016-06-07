@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1>Staffan Selander .li</h1>
+				<h1><a href="/" ng-click="navbar.scrollTop()">Staffan Selander .li</a></h1>
 				<div class="navigation-blob-wrapper" ng-class="{ 'active': navbar.expandBlob}">
 					<div class="navigation-blob" ng-click="navbar.expandBlob = !navbar.expandBlob">
 						<span></span>
@@ -10,13 +10,13 @@
 						<span></span>
 					</div>
 					<div class="icons-wrapper" ng-click="navbar.expandBlob = false">
-						<a href="/" ng-click="navbar.scrollTop()">
+						<a href="/" ng-click="navbar.scrollTop()" ng-class="{ 'selected': navbar.meta.location === 'home' }">
 							<i class="fa fa-home"></i>
 						</a>
-						<a href="experience" ng-click="navbar.scrollTop()">
+						<a href="experience" ng-click="navbar.scrollTop()" ng-class="{ 'selected': navbar.meta.location === 'experience' }">
 							<i class="fa fa-bookmark"></i>
 						</a>
-						<a href="skills">
+						<a href="skills" ng-class="{ 'selected': navbar.meta.location === 'skills' }">
 							<i class="fa fa-user"></i>
 						</a>
 					</div>

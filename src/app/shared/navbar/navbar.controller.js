@@ -4,9 +4,10 @@ angular.module('selander.li.shared.navbar.controller', [
     'mgcrea.ngStrap.affix',
     'duScroll'
 ])
-.controller('navbarController', function($document) {
+.controller('navbarController', function(appService, $scope, $document) {
     var vm = this;
 
+    vm.meta = appService.meta;
 
     active();
 

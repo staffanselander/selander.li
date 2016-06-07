@@ -95,7 +95,7 @@
             background: $text-color;
         }
 
-        &:hover, &:active &:focus {
+        &:hover, &:active, &:focus {
             text-decoration: none;
             
             &::after {

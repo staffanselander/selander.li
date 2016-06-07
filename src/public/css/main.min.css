@@ -5796,6 +5796,25 @@ body > navbar {
     color: #fff;
     -webkit-transition: opacity .3s;
     transition: opacity .3s; }
+    .navigation-wrapper h1 > a {
+      position: relative;
+      color: #fff; }
+      .navigation-wrapper h1 > a::after {
+        -webkit-transition: width .5s;
+        transition: width .5s;
+        position: absolute;
+        content: "";
+        height: 2px;
+        opacity: 1;
+        bottom: -4px;
+        width: 0%;
+        left: 0;
+        background: #fff; }
+      .navigation-wrapper h1 > a:hover, .navigation-wrapper h1 > a:active, .navigation-wrapper h1 > a:focus {
+        text-decoration: none;
+        color: #fff; }
+      .navigation-wrapper h1 > a:hover::after {
+        width: 100%; }
   @media (max-width: 767px) {
     .navigation-wrapper.blob-active {
       background: rgba(0, 0, 0, 0.1); } }
@@ -5858,6 +5877,10 @@ body > navbar {
       pointer-events: none;
       -webkit-transition: top .3s, bottom .3s, left .3s, right .3s, background .3s, opacity .3s;
       transition: top .3s, bottom .3s, left .3s, right .3s, background .3s, opacity .3s; }
+      .navigation-wrapper .navigation-blob-wrapper .icons-wrapper > a.selected {
+        background: rgba(255, 255, 255, 0.4); }
+        .navigation-wrapper .navigation-blob-wrapper .icons-wrapper > a.selected:hover {
+          background: rgba(255, 255, 255, 0.4); }
       .navigation-wrapper .navigation-blob-wrapper .icons-wrapper > a > i {
         position: absolute;
         font-size: 16px;
@@ -6254,9 +6277,9 @@ strong {
       width: 0%;
       left: 0;
       background: #3e4651; }
-    .skills-view .email:hover, .skills-view .email:active .skills-view .email:focus {
+    .skills-view .email:hover, .skills-view .email:active, .skills-view .email:focus {
       text-decoration: none; }
-      .skills-view .email:hover::after, .skills-view .email:active .skills-view .email:focus::after {
+      .skills-view .email:hover::after, .skills-view .email:active::after, .skills-view .email:focus::after {
         width: 100%; }
   .skills-view .this-is-me {
     position: relative;
