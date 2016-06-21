@@ -21,7 +21,7 @@ Goal is to describe me and my _code_.
 
 ## Tools used
 
-- Laravel (Javascript Framework) https://angularjs.org/
+- Angular (Javascript Framework) https://angularjs.org/
 - Prerender (Prerender Javascript for SEO) https://prerender.io/
 - Nginx (Webserver) https://www.nginx.com
 

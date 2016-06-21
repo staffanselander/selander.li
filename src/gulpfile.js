@@ -1,9 +1,13 @@
-var gulp       = require('gulp');
-var sass       = require('gulp-sass');
-var concat     = require('gulp-concat');
-var sassLint   = require('gulp-sass-lint');
-var livereload = require('gulp-livereload');
-var prefix 	   = require('gulp-autoprefixer');
+var prefix      = require('gulp-autoprefixer');
+var typescript  = require('gulp-typescript');
+var livereload  = require('gulp-livereload');
+var sassLint    = require('gulp-sass-lint');
+var concat      = require('gulp-concat');
+var sass        = require('gulp-sass');
+var gulp        = require('gulp');
+var del         = require('del');
+
+var typescriptProject = typescript.createProject('./tsconfig.json');
 
 /**
  * Wrap all our sass pipes
@@ -59,9 +63,19 @@ gulp.task('javascriptDependencies', function() {
 });
 
 /**
+ * Typescript Task
+ */
+gulp.task('typescriptApplication', function() {
+    var typescriptResult = typescriptProject.src()
+                            .pipe(typescript(typescriptProject));
+
+    return typescriptResult.js.pipe(gulp.dest('./'));
+});
+
+/**
  * Javascript Application task
  */
-gulp.task('javascriptApplication', function() {
+gulp.task('javascriptApplication', ['typescriptApplication'], function() {
 	compileJavascript([
 			'./app/app.module.js',
 			'./app/**/*.js',
@@ -69,6 +83,10 @@ gulp.task('javascriptApplication', function() {
 		],
 		'main.min.js'
 	);
+});
+
+gulp.task('clean:javascript', function() {
+    del(['app/**/*.js']); 
 });
 
 /**
@@ -96,7 +114,7 @@ gulp.task('watch', function(){
 		'javascriptApplication'
 	]);
 
-	gulp.watch('./app/**/*.js', [
+	gulp.watch('./app/**/*.ts', [
 		'javascriptApplication'
 	]);
 

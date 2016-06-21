@@ -6,28 +6,46 @@ angular.module("selander.li", [
     'selander.li.components.home.controller',
     'selander.li.components.skills.controller',
     'selander.li.components.experience.controller'
-], function () {
+], function() {
+
 })
-    .config(function ($routeProvider, $locationProvider, $compileProvider) {
+
+.config(function($routeProvider, $locationProvider, $compileProvider) {
+
     $compileProvider.debugInfoEnabled = false;
+
     $locationProvider.html5Mode(true);
+
     $routeProvider
-        .when('/skills', {
+
+    .when('/skills',
+    {
         templateUrl: 'app/components/skills/skills.tpl.html',
         controller: 'skillsController',
         controllerAs: 'vm'
     })
-        .when('/experience', {
+
+    .when('/experience',
+    {
         templateUrl: 'app/components/experience/experience.tpl.html',
         controller: 'experienceController'
     })
-        .when('/', {
+
+    .when('/',
+    {
         templateUrl: 'app/components/home/home.tpl.html',
         controller: 'homeController'
     })
-        .otherwise({
+
+    .otherwise(
+    {
         redirectTo: '/'
     });
+
 })
-    .run(function run($rootScope) {
-});
+
+.run(function run($rootScope: ng.IRootScopeService) {
+
+})
+
+;

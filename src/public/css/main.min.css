@@ -5043,7 +5043,6 @@ button.close {
   outline: 0; }
   .modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
-    -ms-transform: translate(0, -25%);
     transform: translate(0, -25%);
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
@@ -5051,7 +5050,6 @@ button.close {
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
   .modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
     transform: translate(0, 0); }
 
 .modal-open .modal {
@@ -5852,7 +5850,6 @@ body > navbar {
           top: 33px; }
     .navigation-wrapper .navigation-blob-wrapper.active .navigation-blob {
       -webkit-transform: scale(0.8, 0.8);
-          -ms-transform: scale(0.8, 0.8);
               transform: scale(0.8, 0.8); }
     .navigation-wrapper .navigation-blob-wrapper.active .icons-wrapper > a {
       pointer-events: initial;
@@ -5889,8 +5886,7 @@ body > navbar {
         display: block;
         color: #fff;
         -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%); }
       .navigation-wrapper .navigation-blob-wrapper .icons-wrapper > a:nth-of-type(2) {
         top: initial;
         left: initial;
@@ -5911,11 +5907,9 @@ body > navbar {
     padding: 7px 0; }
     .navigation-wrapper.affix .navigation-blob {
       -webkit-transform: scale(0.85);
-          -ms-transform: scale(0.85);
               transform: scale(0.85); }
     .navigation-wrapper.affix .navigation-blob-wrapper.active .navigation-blob {
       -webkit-transform: scale(0.75);
-          -ms-transform: scale(0.75);
               transform: scale(0.75); }
 
 .skills .navigation-wrapper .navigation-blob-wrapper .icons-wrapper > a:nth-of-type(2) {
@@ -6046,8 +6040,7 @@ strong {
 
 .home-view {
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   position: absolute;
   padding: 0 15px;
@@ -6082,8 +6075,7 @@ strong {
 
 .experience-view {
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   position: absolute;
   max-width: 770px;
@@ -6117,8 +6109,7 @@ strong {
       color: #fff; }
       .experience-view .fillouts .fillout .text span {
         -webkit-transform: translate(-50%, 0%);
-        -ms-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
         color: rgba(255, 255, 255, 0.7);
         text-align: center;
         position: absolute;
@@ -6209,7 +6200,6 @@ strong {
   left: -20px;
   top: 25%;
   -webkit-transform: translate(-50px, 0px);
-      -ms-transform: translate(-50px, 0px);
           transform: translate(-50px, 0px);
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
@@ -6231,17 +6221,14 @@ strong {
 
 .social-container.skills-social {
   -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px); }
   .social-container.skills-social a:hover {
     -webkit-transform: translate(10px, 0px);
-        -ms-transform: translate(10px, 0px);
             transform: translate(10px, 0px); }
 
 .skills-view {
   min-height: calc(100vh - 103px);
   -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   background: #fff;
   width: 100%;
@@ -6325,7 +6312,6 @@ strong {
     right: 0;
     top: 50%;
     -webkit-transform: translate(0%, -50%);
-        -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%); }
     .chart-wrapper .chart-tile-wrapper .chart-tile {
       background: #f7f7f7;
@@ -6347,7 +6333,6 @@ strong {
           width: 0% !important; }
         .chart-wrapper .chart-tile-wrapper .chart-tile .chart-tile-fillout > span {
           -webkit-transform: translate(0, -50%);
-              -ms-transform: translate(0, -50%);
                   transform: translate(0, -50%);
           position: absolute;
           color: #ffffff;
@@ -6382,7 +6367,6 @@ strong {
     margin: 40px 20px; }
     .work-section .icons-container > a:hover {
       -webkit-transform: scale(1.08) rotate(5deg);
-          -ms-transform: scale(1.08) rotate(5deg);
               transform: scale(1.08) rotate(5deg); }
     .work-section .icons-container > a > img {
       display: inline-block;

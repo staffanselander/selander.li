@@ -4,15 +4,24 @@ angular.module('selander.li.shared.navbar.controller', [
     'mgcrea.ngStrap.affix',
     'duScroll'
 ])
-    .controller('navbarController', function (appService, $scope, $document) {
+.controller('navbarController', function(appService: AppServiceInterface, $scope: ng.IScope, $document) {
     var vm = this;
+
     vm.meta = appService.meta;
+
     active();
+
     ////////
+
     function active() {
+
     }
-    vm.scrollTop = function () {
-        $document.scrollTopAnimated(0, 600).then(function () {
+
+    vm.scrollTop = function() {
+        $document.scrollTopAnimated(0, 600).then(function() {
+            
         });
     };
-});
+})
+
+;
