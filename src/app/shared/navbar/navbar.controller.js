@@ -1,3 +1,6 @@
+"use strict";
+require('angular-strap');
+require('angular-scroll');
 angular.module('selander.li.shared.navbar.controller', [
     'mgcrea.ngStrap.helpers.debounce',
     'mgcrea.ngStrap.helpers.dimensions',

@@ -1,3 +1,9 @@
+import 'App/app.service';
+
+import 'angular-scroll-animate';
+import 'angular-parallax';
+import 'angular-count-to';
+
 angular.module('selander.li.components.skills.controller', [
     'selander.li.app.service',
     'angular-scroll-animate',

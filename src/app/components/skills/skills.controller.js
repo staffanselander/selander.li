@@ -1,3 +1,8 @@
+"use strict";
+require('App/app.service');
+require('angular-scroll-animate');
+require('angular-parallax');
+require('angular-count-to');
 angular.module('selander.li.components.skills.controller', [
     'selander.li.app.service',
     'angular-scroll-animate',

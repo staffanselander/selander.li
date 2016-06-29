@@ -1,3 +1,15 @@
+import 'angular-route';
+import 'angular-animate';
+
+import 'App/app.controller';
+
+import 'App/shared/navbar/navbar.component';
+
+import 'App/components/home/home.controller';
+import 'App/components/skills/skills.controller';
+import 'App/components/experience/experience.controller';
+
+
 angular.module("selander.li", [
     'ngRoute',
     'ngAnimate',

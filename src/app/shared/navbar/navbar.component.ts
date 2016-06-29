@@ -1,3 +1,5 @@
+import 'App/shared/navbar/navbar.controller';
+
 angular.module('selander.li.shared.navbar.component', [
     'selander.li.shared.navbar.controller'
 ])

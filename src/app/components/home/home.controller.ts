@@ -1,4 +1,4 @@
-angular.module('selander.li.components.home.controller', [
+export default angular.module('selander.li.components.home.controller', [
     'selander.li.app.service'
 ])
 

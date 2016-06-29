@@ -1,4 +1,6 @@
-angular.module('selander.li.app.controller', [
+import 'App/app.service';
+
+export default angular.module('selander.li.app.controller', [
     'selander.li.app.service',
 ])
 

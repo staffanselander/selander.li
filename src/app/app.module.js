@@ -1,3 +1,11 @@
+"use strict";
+require('angular-route');
+require('angular-animate');
+require('App/app.controller');
+require('App/shared/navbar/navbar.component');
+require('App/components/home/home.controller');
+require('App/components/skills/skills.controller');
+require('App/components/experience/experience.controller');
 angular.module("selander.li", [
     'ngRoute',
     'ngAnimate',

@@ -85,8 +85,23 @@ gulp.task('javascriptApplication', ['typescriptApplication'], function() {
 	);
 });
 
-gulp.task('clean:javascript', function() {
-    del(['app/**/*.js']); 
+gulp.task('delete:javascript', function() {
+    del(['app/**/*.js']);
+});
+
+gulp.task('clean:javascript', ['delete:javascript', 
+    'javascriptApplication'
+]);
+
+var minMap = require('gulp-min-map');
+var minFiles = {};
+
+gulp.task('log', function() {
+    gulp.src('./app/**/*.js')
+        .pipe(minMap(['js'], minFiles))
+        .on('end', function() {
+            console.log(minFiles);
+        });
 });
 
 /**

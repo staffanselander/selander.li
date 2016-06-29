@@ -1,3 +1,5 @@
+"use strict";
+require('App/app.service');
 angular.module('selander.li.components.experience.controller', [
     'selander.li.app.service'
 ])
