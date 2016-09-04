@@ -2,10 +2,18 @@ version: '2'
 
 services:
   selanderli:
-    build: .
+    build: app
+    environment:
+      ENV: development
+      DEBUG: 'true'
+
+  nginx:
+    build: nginx
     ports:
-        - 80:80
-        - 465:465
+      - 80:80
+      - 465:465
+    volumes_from:
+      - selanderli
     depends_on:
       - prerender
 

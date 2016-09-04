@@ -1,9 +1,9 @@
 version: '2'
 
 services:
-  selanderli:
-      ports:
-          - 8080:80
-      volumes:
-          - ./app:/usr/share/nginx/html
-          - ./nginx:/etc/nginx/conf.d/
+  nginx:
+    ports:
+      - 8080:80
+      - 8465:465
+    volumes:
+      - ./app:/usr/src/selanderli

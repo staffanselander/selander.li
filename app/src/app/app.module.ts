@@ -9,7 +9,6 @@ import 'app/components/home/home.controller';
 import 'app/components/skills/skills.controller';
 import 'app/components/experience/experience.controller';
 
-
 angular.module("selander.li", [
     'ngRoute',
     'ngAnimate',

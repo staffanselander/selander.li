@@ -9,8 +9,6 @@ ehthumbs.db
 Thumbs.db
 *~
 
-# Created by https://www.gitignore.io/api/node,git
-
 ### Node ###
 # Logs
 logs
@@ -53,8 +51,6 @@ jspm_packages
 
 ### Git ###
 *.orig
-
-# Created by https://www.gitignore.io/api/typings
 
 ### Typings ###
 ## Ignore downloaded typings

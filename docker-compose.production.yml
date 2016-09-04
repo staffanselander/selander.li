@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  selanderli:
+    command: [npm, --prefix, /usr/src/selanderli, run, build]
+    environment:
+      ENV: production
+      DEBUG: 'false'
+  
+  nginx:
+    ports:
+      - 8080:80
+    restart: always
+
+  prerender:
+    restart: always

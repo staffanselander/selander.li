@@ -6,6 +6,7 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const webpack = require('webpack');
 
@@ -30,6 +31,10 @@ module.exports = {
     },
 
     plugins: [
+        new CleanWebpackPlugin([helper.root('build')], {
+            root: helper.root('')
+        }),
+
         new ForkCheckerPlugin(),
 
         new webpack.optimize.OccurenceOrderPlugin(true),
